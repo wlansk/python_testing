@@ -1,1 +1,1 @@
-# python_testing
+ # Creating a project in PyCharm

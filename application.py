@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 __author__ = 'wlas'
 
 
-class application:
+class Application:
 
     def __init__(self):
         self.wd = WebDriver()

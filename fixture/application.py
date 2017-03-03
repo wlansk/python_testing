@@ -1,6 +1,7 @@
-from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium import webdriver
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
+from fixture.contact import ContactHelper
 
 __author__ = 'wlas'
 
@@ -8,7 +9,7 @@ __author__ = 'wlas'
 class Application:
 
     def __init__(self):
-        self.wd = WebDriver()
+        self.wd = webdriver.Firefox()
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
 

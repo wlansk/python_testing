@@ -15,8 +15,8 @@ def app(request):
     browser = request.config.getoption("--browser")
     config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--target"))
     if target is None:
-        with open(config_file) as config_file:
-            target = json.load(config_file)
+        with open(config_file) as f:
+            target = json.load(f)
     if fixture is None or not fixture.is_valid():
         fixture = Application(browser=browser, base_url=target['baseUrl'])
     fixture.session.ensure_login(username=target['username'], password=target['password'])
